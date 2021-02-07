@@ -7,4 +7,4 @@ var arr2 = ['a', 'b', 'c'];
 // ok
 arr2.push('csdn');
 // error
-arr2.push(1);
+// arr2.push(1);
