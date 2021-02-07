@@ -18,18 +18,27 @@
 //   // error
 //   a.gender;
 
-interface Person {
-    username: string;
-    age: number;
+// interface Person {
+//     username: string;
+//     age: number;
+// }
+
+// let user: Person = {
+//     username: 'ls',
+//     age: 35
+// }
+// let user1: Person = {
+//     username: 'zs',
+//     age: 30
+// }
+
+// let user2 = Person;
+
+class Person {
+    
+    constructor(public username: string, public age: number) {
+
+    }
 }
 
-let user: Person = {
-    username: 'ls',
-    age: 35
-}
-let user1: Person = {
-    username: 'zs',
-    age: 30
-}
-
-let user2 = Person;
+let user: Person = new Person('ls', 35);
