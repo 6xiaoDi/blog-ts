@@ -34,11 +34,23 @@
 
 // let user2 = Person;
 
-class Person {
+// class Person {
     
-    constructor(public username: string, public age: number) {
+//     constructor(public username: string, public age: number) {
 
-    }
+//     }
+// }
+
+// let user: Person = new Person('ls', 35);
+
+interface AjaxOptions {
+    url: string;
+    method: string;
 }
 
-let user: Person = new Person('ls', 35);
+function ajax(options: AjaxOptions) {}
+
+ajax({
+    url: '',
+    method: 'get'
+});
