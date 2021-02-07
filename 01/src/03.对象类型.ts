@@ -31,3 +31,5 @@ let user1: Person = {
     username: 'zs',
     age: 30
 }
+
+let user2 = Person;

@@ -9,3 +9,4 @@ var user1 = {
     username: 'zs',
     age: 30
 };
+var user2 = Person;
