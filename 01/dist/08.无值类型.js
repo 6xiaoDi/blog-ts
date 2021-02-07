@@ -1,5 +1,6 @@
+// function fn(){
 function fn() {
     // return
     // return undefined;
 }
-var v = fn();
+// let v = fn()

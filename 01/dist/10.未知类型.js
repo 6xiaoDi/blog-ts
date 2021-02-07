@@ -14,4 +14,4 @@ var c;
 c.a;
 // error
 var d;
-d.a;
+// d.a;

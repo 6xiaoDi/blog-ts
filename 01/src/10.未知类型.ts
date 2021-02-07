@@ -22,4 +22,4 @@ let c: any;
 c.a;
 // error
 let d: unknown;
-d.a;
+// d.a;
