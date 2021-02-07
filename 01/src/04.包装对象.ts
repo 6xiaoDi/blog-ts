@@ -5,7 +5,7 @@ a = '1';
 // a = new String('1');
 
 let b: String;
-b = new String('2');
+// b = new String('2');
 // ok 
 // 和上面正好相反（基础类型有的内容，包装对象一定有）
 b = '2';
