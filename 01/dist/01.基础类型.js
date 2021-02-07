@@ -1,2 +1,4 @@
-// let title: string = 'CSDN';
-var title = 1;
+// let title: string = 1;
+var title = "CSDN";
+var n = 100;
+var isOk = true;
