@@ -9,14 +9,20 @@
 //     readonly y: number;
 // }
 
+// interface Point {
+//     x: number;
+//     y: number;
+//     // color?: string;
+//     color?: number;
+//     // [key:string]: number;
+//     // [key: string]: string  |  undefined;
+//     [key: string]: number  |  undefined;
+// }
+
 interface Point {
     x: number;
     y: number;
-    // color?: string;
-    color?: number;
-    // [key:string]: number;
-    // [key: string]: string  |  undefined;
-    [key: string]: number  |  undefined;
+    [key: number]: number;
 }
 
 let p1: Point = {
@@ -24,6 +30,7 @@ let p1: Point = {
     y: 100
 };
 p1.z = 500;
+p1[0] = 500;
 
 // p1.x = 200;
 
