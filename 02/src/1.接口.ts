@@ -22,7 +22,7 @@
 interface Point {
     x: number;
     y: number;
-    [key: number]: number;
+    [key: string]: number;
 }
 
 let p1: Point = {
@@ -31,6 +31,7 @@ let p1: Point = {
 };
 p1.z = 500;
 p1[0] = 500;
+p1['0'] = 500;
 
 // p1.x = 200;
 
