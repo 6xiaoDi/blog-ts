@@ -72,18 +72,42 @@
 // } )
 
 
-interface IEventFunc {
-    (e: MouseEvent): void
+// interface IEventFunc {
+//     (e: MouseEvent): void
+// }
+//
+//
+// function on(el: HTMLElement, evname: string, callback: IEventFunc) {
+//
+// }
+//
+// let div = document.querySelector('div');
+// if (div) {
+//     on(div, 'click', function(e) {
+//         e.clientX
+//     });
+// }
+
+interface Box {
+    height: number;
+    width: number;
+    fn(a: string): string;
 }
 
-
-function on(el: HTMLElement, evname: string, callback: IEventFunc) {
-
+interface Box {
+    scale: number;
+    // width: string;
+    fn(a: number): number;
 }
 
-let div = document.querySelector('div');
-if (div) {
-    on(div, 'click', function(e) {
-        e.clientX
-    });
+let box: Box = {
+    height: 5,
+    width: 6,
+    scale: 10,
+    // fn: function(a:number):number {
+    //     return a;
+    // },
+    fn: function(a:any):any {
+        return a;
+    },
 }
