@@ -1,6 +1,7 @@
 interface Point {
     x: number;
     y: number;
+    color?: string;
 }
 
 let p1: Point = {
@@ -8,4 +9,4 @@ let p1: Point = {
     y: 100
 };
 
-let p2 = Point;	//错误
+// let p2 = Point;	//错误
