@@ -37,14 +37,26 @@
 
 // let p2 = Point;	//错误
 
-class Person {
-    constructor(public username: string) {}
-}
-class Student extends Person {
+// class Person {
+//     constructor(public username: string) {}
+// }
+// class Student extends Person {
+//
+// }
+//
+// interface Point {
+//     [key: string]: Person;
+//     [key: number]: Student;
+// }
 
+
+interface IFunc {
+    (x: number, y: number): number
 }
 
-interface Point {
-    [key: string]: Person;
-    [key: number]: Student;
+let fn1: IFunc = function(a: number, b: number): number {
+    return a + b;
+}
+let fn12: IFunc = function(a: number, b: number): number {
+    return a + b;
 }
