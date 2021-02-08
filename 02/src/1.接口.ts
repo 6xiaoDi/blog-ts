@@ -50,9 +50,9 @@
 // }
 
 
-interface IFunc {
-    (x: number, y: number): number
-}
+// interface IFunc {
+//     (x: number, y: number): number
+// }
 //
 // let fn1: IFunc = function(a: number, b: number): number {
 //     return a + b;
@@ -61,13 +61,29 @@ interface IFunc {
 //     return a + b;
 // }
 
-function todo(callback: IFunc) {
-    // ....
-    let v = callback(1, 2);
-    // ....
+// function todo(callback: IFunc) {
+//     // ....
+//     let v = callback(1, 2);
+//     // ....
+// }
+//
+// todo( function(a: number, b: number): number {
+//     return a + b;
+// } )
+
+
+interface IEventFunc {
+    (e: MouseEvent): void
 }
 
-todo( function(a: number, b: number): number {
-    return a + b;
-} )
 
+function on(el: HTMLElement, evname: string, callback: IEventFunc) {
+
+}
+
+let div = document.querySelector('div');
+if (div) {
+    on(div, 'click', function(e) {
+        e.clientX
+    });
+}

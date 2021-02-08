@@ -3,18 +3,11 @@
 //     y: number;
 //     color?: string;
 // }
-//
-// let fn1: IFunc = function(a: number, b: number): number {
-//     return a + b;
-// }
-// let fn12: IFunc = function(a: number, b: number): number {
-//     return a + b;
-// }
-function todo(callback) {
-    // ....
-    var v = callback(1, 2);
-    // ....
+function on(el, evname, callback) {
 }
-todo(function (a, b) {
-    return a + b;
-});
+var div = document.querySelector('div');
+if (div) {
+    on(div, 'click', function (e) {
+        e.clientX;
+    });
+}
