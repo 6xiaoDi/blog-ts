@@ -7,7 +7,7 @@ let obj1 = {
     a: 1,
     fn( x: number) {
         // this
-        this.a
+        // this.a
     }
 }
 
@@ -23,7 +23,7 @@ let obj2: T = {
     a: 1,
     fn(this: T, x: number) {
         // this
-        (<T>this).b;
+        // (<T>this).b;
         // this
     }
 }

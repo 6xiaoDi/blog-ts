@@ -2,7 +2,7 @@ var obj1 = {
     a: 1,
     fn: function (x) {
         // this
-        this.a;
+        // this.a
     }
 };
 // let obj2: T = {
@@ -16,7 +16,7 @@ var obj2 = {
     a: 1,
     fn: function (x) {
         // this
-        this.b;
+        // (<T>this).b;
         // this
     }
 };
