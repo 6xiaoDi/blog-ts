@@ -23,9 +23,22 @@ class VIP extends User1 {
     }
 
     // postArticle 方法重写，覆盖
-    postArticle(title: string, content: string): void {
-        this.score++;
-        console.log(`${this.username} 发表了一篇文章： ${title}，积分：${this.score}`)
+    // postArticle(title: string, content: string): void {
+    //     this.score++;
+    //     console.log(`${this.username} 发表了一篇文章： ${title}，积分：${this.score}`)
+    // }
+
+    // 参数个数，参数类型不同：重载
+    postArticle(title: string, content: string): void;
+    postArticle(title: string, content: string, file: string): void;
+    postArticle(title: string, content: string, file?: string) {
+
+        // 调用父级逻辑
+        super.postArticle(title, content);
+
+        if (file) {
+            this.postAttachment(file);
+        }
     }
 
     postAttachment(file: string): void {
@@ -35,4 +48,5 @@ class VIP extends User1 {
 
 let vip1 = new VIP(1, "zhangsan", 0);
 vip1.postArticle('标题', '内容');
+vip1.postArticle('标题', '内容', '1.png');
 vip1.postAttachment('1.png');

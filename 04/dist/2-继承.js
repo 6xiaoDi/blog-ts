@@ -32,10 +32,12 @@ var VIP = /** @class */ (function (_super) {
         console.log('子类构造函数');
         return _this;
     }
-    // postArticle 方法重写，覆盖
-    VIP.prototype.postArticle = function (title, content) {
-        this.score++;
-        console.log(this.username + " \u53D1\u8868\u4E86\u4E00\u7BC7\u6587\u7AE0\uFF1A " + title + "\uFF0C\u79EF\u5206\uFF1A" + this.score);
+    VIP.prototype.postArticle = function (title, content, file) {
+        // 调用父级逻辑
+        _super.prototype.postArticle.call(this, title, content);
+        if (file) {
+            this.postAttachment(file);
+        }
     };
     VIP.prototype.postAttachment = function (file) {
         console.log(this.username + " \u4E0A\u4F20\u4E86\u4E00\u4E2A\u9644\u4EF6\uFF1A " + file);
@@ -44,4 +46,5 @@ var VIP = /** @class */ (function (_super) {
 }(User1));
 var vip1 = new VIP(1, "zhangsan", 0);
 vip1.postArticle('标题', '内容');
+vip1.postArticle('标题', '内容', '1.png');
 vip1.postAttachment('1.png');
