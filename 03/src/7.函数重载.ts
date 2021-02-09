@@ -18,6 +18,6 @@ if (div2 ) {
     showOrHide(div2, 'display', 'none');
     showOrHide(div2, 'opacity', 1);
 
-    showOrHide(div2, 'opacity', 'block');
+    // showOrHide(div2, 'opacity', 'block');
 
 }
