@@ -11,7 +11,22 @@ class User1 {
 }
 
 class VIP extends User1 {
+    constructor(
+        id: number,
+        username: string,
+        public score: number
+    ) {
+        // this.id;
+        super(id, username);
+        // 必须在super调用之后才能访问 this
+        console.log('子类构造函数');
+    }
 
+    postAttachment(file: string): void {
+        console.log(`${this.username} 上传了一个附件： ${file}`)
+    }
 }
 
-let vip1 = new VIP(1, "zhangsan");
+let vip1 = new VIP(1, "zhangsan", 0);
+vip1.postArticle('标题', '内容');
+vip1.postAttachment('1.png');

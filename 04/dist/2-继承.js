@@ -23,9 +23,20 @@ var User1 = /** @class */ (function () {
 }());
 var VIP = /** @class */ (function (_super) {
     __extends(VIP, _super);
-    function VIP() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function VIP(id, username, score) {
+        var _this = 
+        // this.id;
+        _super.call(this, id, username) || this;
+        _this.score = score;
+        // 必须在super调用之后才能访问 this
+        console.log('子类构造函数');
+        return _this;
     }
+    VIP.prototype.postAttachment = function (file) {
+        console.log(this.username + " \u4E0A\u4F20\u4E86\u4E00\u4E2A\u9644\u4EF6\uFF1A " + file);
+    };
     return VIP;
 }(User1));
-var vip1 = new VIP(1, "zhangsan");
+var vip1 = new VIP(1, "zhangsan", 0);
+vip1.postArticle('标题', '内容');
+vip1.postAttachment('1.png');
