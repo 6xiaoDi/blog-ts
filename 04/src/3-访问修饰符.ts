@@ -9,12 +9,27 @@ class User3 {
     ) {
         // ...
     }
+
+    method1() {
+        this.username;
+        this._password;
+    }
+
+}
+
+class VIP2 extends User {
+
+    method2() {
+        this.username;
+        this._password;
+    }
+
 }
 
 
 let user2 = new User3(1, 'ls', '123');
-user2.id;
-user2.id = 1;
-user2.username;
-user2._password;
+// user2.id;
+// user2.id = 1;
+// user2.username;
+// user2._password;
 
