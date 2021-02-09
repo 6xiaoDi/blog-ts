@@ -10,18 +10,34 @@ class User3 {
         // ...
     }
 
+    // setPassword(password: string) {
+    //     if (password.length >= 6) {
+    //         this._password = password;
+    //     }
+    // }
+
+    set password(password: string) {
+        if (password.length >= 6) {
+            this.password = password;
+        }
+    }
+
+    get password(): string {
+        return '****';
+    }
+
     method1() {
         this.username;
-        this._password;
+        // this._password;
     }
 
 }
 
-class VIP2 extends User {
+class VIP2 extends User3 {
 
     method2() {
         this.username;
-        this._password;
+        // this._password;
     }
 
 }
@@ -33,3 +49,8 @@ let user2 = new User3(1, 'ls', '123');
 // user2.username;
 // user2._password;
 
+console.log(user2.password)
+
+user2.password = '223';
+
+console.log(user2.password)

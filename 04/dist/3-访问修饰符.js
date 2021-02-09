@@ -24,9 +24,26 @@ var User3 = /** @class */ (function () {
         this._password = _password;
         // ...
     }
+    Object.defineProperty(User3.prototype, "password", {
+        get: function () {
+            return '****';
+        },
+        // setPassword(password: string) {
+        //     if (password.length >= 6) {
+        //         this._password = password;
+        //     }
+        // }
+        set: function (password) {
+            if (password.length >= 6) {
+                this.password = password;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
     User3.prototype.method1 = function () {
         this.username;
-        this._password;
+        // this._password;
     };
     return User3;
 }());
@@ -37,12 +54,15 @@ var VIP2 = /** @class */ (function (_super) {
     }
     VIP2.prototype.method2 = function () {
         this.username;
-        this._password;
+        // this._password;
     };
     return VIP2;
-}(User));
+}(User3));
 var user2 = new User3(1, 'ls', '123');
 // user2.id;
 // user2.id = 1;
 // user2.username;
 // user2._password;
+console.log(user2.password);
+user2.password = '223';
+console.log(user2.password);
