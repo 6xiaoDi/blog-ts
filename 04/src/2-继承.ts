@@ -22,6 +22,12 @@ class VIP extends User1 {
         console.log('子类构造函数');
     }
 
+    // postArticle 方法重写，覆盖
+    postArticle(title: string, content: string): void {
+        this.score++;
+        console.log(`${this.username} 发表了一篇文章： ${title}，积分：${this.score}`)
+    }
+
     postAttachment(file: string): void {
         console.log(`${this.username} 上传了一个附件： ${file}`)
     }
