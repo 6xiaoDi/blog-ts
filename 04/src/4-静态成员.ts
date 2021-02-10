@@ -17,7 +17,7 @@ class User4 {
     static info(): void {
         // 类的静态成员都是使用 类名.静态成员 来访问
         console.log(User4.ALLOW_FILE_TYPE_LIST);
-        console.log(this._allowFileTypes);
+        // console.log(this._allowFileTypes);
     }
 
 }

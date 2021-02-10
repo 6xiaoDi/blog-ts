@@ -8,7 +8,7 @@ var User4 = /** @class */ (function () {
     User4.info = function () {
         // 类的静态成员都是使用 类名.静态成员 来访问
         console.log(User4.ALLOW_FILE_TYPE_LIST);
-        console.log(this._allowFileTypes);
+        // console.log(this._allowFileTypes);
     };
     // static 必须在 readonly 之前
     // 整个用户群体允许上传的所有附件类型
