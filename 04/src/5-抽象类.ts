@@ -1,4 +1,4 @@
-class Component{
+abstract class Component{
 
     props: any;
     state: any;
@@ -7,9 +7,7 @@ class Component{
         this.props = props;
     }
 
-    render(): string {
-        return '';
-    }
+    abstract render(): string;
 
 }
 
