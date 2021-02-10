@@ -27,6 +27,8 @@ var MyComponent = /** @class */ (function (_super) {
         return _this;
     }
     MyComponent.prototype.render = function () {
+        this.props.val;
+        this.state.x;
         return '<myComponent />';
     };
     return MyComponent;

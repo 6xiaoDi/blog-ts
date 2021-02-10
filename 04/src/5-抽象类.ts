@@ -1,9 +1,9 @@
-abstract class Component{
+abstract class Component<T1, T2> {
 
-    props: any;
-    state: any;
+    props: T1;
+    state: T2;
 
-    constructor(props: any) {
+    constructor(props: T1) {
         this.props = props;
     }
 
@@ -11,10 +11,16 @@ abstract class Component{
 
 }
 
+interface IMyComponentProps {
+    val: number;
+}
+interface IMyComponentState {
+    x: number;
+}
 
-class MyComponent extends Component {
+class MyComponent extends Component<IMyComponentProps, IMyComponentState> {
 
-    constructor(props: any) {
+    constructor(props: IMyComponentProps) {
         super(props);
 
         this.state = {
@@ -23,6 +29,8 @@ class MyComponent extends Component {
     }
 
     render() {
+        this.props.val;
+        this.state.x;
         return '<myComponent />';
     }
 
