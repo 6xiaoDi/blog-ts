@@ -7,6 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 function d1(target) {
     console.log(typeof target, target);
 }
+function d2(target, name) {
+    console.log(typeof target, name);
+}
 var MyClass = /** @class */ (function () {
     function MyClass() {
     }
@@ -26,6 +29,12 @@ var MyClass = /** @class */ (function () {
     });
     MyClass.prototype.method1 = function (x, y) { };
     MyClass.method2 = function () { };
+    __decorate([
+        d2
+    ], MyClass.prototype, "a", void 0);
+    __decorate([
+        d2
+    ], MyClass, "property1", void 0);
     MyClass = __decorate([
         d1
     ], MyClass);
