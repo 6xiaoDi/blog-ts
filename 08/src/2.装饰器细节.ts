@@ -2,6 +2,10 @@ function d1(target: Function) {
     console.log(typeof target, target);
 }
 
+function d11(target: Function) {
+    console.log(typeof target, target, '1111111');
+}
+
 function d2(target: any, name: string) {
     console.log(typeof target, name);
 }
@@ -21,6 +25,7 @@ function d5(target: any, name: string, index: number) {
 }
 
 @d1
+@d11
 class MyClass {
 
     @d2

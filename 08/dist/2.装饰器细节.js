@@ -10,6 +10,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 function d1(target) {
     console.log(typeof target, target);
 }
+function d11(target) {
+    console.log(typeof target, target, '1111111');
+}
 function d2(target, name) {
     console.log(typeof target, name);
 }
@@ -62,7 +65,8 @@ var MyClass = /** @class */ (function () {
         d4
     ], MyClass, "method2", null);
     MyClass = __decorate([
-        d1
+        d1,
+        d11
     ], MyClass);
     return MyClass;
 }());
