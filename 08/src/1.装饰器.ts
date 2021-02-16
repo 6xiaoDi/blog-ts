@@ -8,7 +8,15 @@ function log(target: Function, name: string, descriptor: PropertyDescriptor) {
     // 把原始的方法提取出来
     let fn = descriptor.value;
     descriptor.value = function(a: number, b: number) {
-        console.log('这是新的方法')
+        let result = fn(a, b);
+        console.log('日志：', {
+            name,
+            a,
+            b,
+            result
+        });
+
+        return result;
     }
 }
 
