@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "target": "es5",
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "experimentalDecorators": true
+    },
+    "include": ["./src/**/*"]
+}
