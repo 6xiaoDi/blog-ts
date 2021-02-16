@@ -13,6 +13,9 @@ function d2(target, name) {
 function d3(target, name, descriptor) {
     console.log(typeof target, name, descriptor);
 }
+function d4(target, name, descriptor) {
+    console.log(typeof target, name, descriptor);
+}
 var MyClass = /** @class */ (function () {
     function MyClass() {
     }
@@ -39,11 +42,17 @@ var MyClass = /** @class */ (function () {
         d3
     ], MyClass.prototype, "b", null);
     __decorate([
+        d4
+    ], MyClass.prototype, "method1", null);
+    __decorate([
         d2
     ], MyClass, "property1", void 0);
     __decorate([
         d3
     ], MyClass, "c", null);
+    __decorate([
+        d4
+    ], MyClass, "method2", null);
     MyClass = __decorate([
         d1
     ], MyClass);

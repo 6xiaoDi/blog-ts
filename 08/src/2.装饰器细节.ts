@@ -10,6 +10,10 @@ function d3(target: any, name: string, descriptor: PropertyDescriptor) {
     console.log(typeof target, name, descriptor);
 }
 
+function d4(target: any, name: string, descriptor: PropertyDescriptor) {
+    console.log(typeof target, name, descriptor);
+}
+
 @d1
 class MyClass {
 
@@ -29,7 +33,9 @@ class MyClass {
         return 2;
     }
 
+    @d4
     public method1(x: number, y: number) {}
 
+    @d4
     public static method2() {}
 }
