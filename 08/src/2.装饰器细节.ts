@@ -6,6 +6,10 @@ function d2(target: any, name: string) {
     console.log(typeof target, name);
 }
 
+function d3(target: any, name: string, descriptor: PropertyDescriptor) {
+    console.log(typeof target, name, descriptor);
+}
+
 @d1
 class MyClass {
 
@@ -15,10 +19,12 @@ class MyClass {
     @d2
     a: number;
 
+    @d3
     get b() { 
         return 1; 
     }
 
+    @d3
     static get c() {
         return 2;
     }
