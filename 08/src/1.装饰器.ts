@@ -16,5 +16,5 @@ class M {
     }
 }
 
-let v1 = M.add(1, 2);
-console.log(v1);
+// let v1 = M.add(1, 2);
+// console.log(v1);
