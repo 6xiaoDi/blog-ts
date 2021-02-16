@@ -27,6 +27,7 @@ class M {
         return a + b;
     }
 
+    @log
     static sub(a: number, b: number) {
         return a - b;
     }

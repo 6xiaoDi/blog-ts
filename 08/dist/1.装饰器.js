@@ -35,6 +35,9 @@ var M = /** @class */ (function () {
     __decorate([
         log
     ], M, "add", null);
+    __decorate([
+        log
+    ], M, "sub", null);
     return M;
 }());
 var v1 = M.add(1, 2);
