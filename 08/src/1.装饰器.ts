@@ -26,7 +26,13 @@ class M {
     static add(a: number, b: number) {
         return a + b;
     }
+
+    static sub(a: number, b: number) {
+        return a - b;
+    }
 }
 
 let v1 = M.add(1, 2);
 console.log(v1);
+let v2 = M.sub(1, 2);
+console.log(v2);

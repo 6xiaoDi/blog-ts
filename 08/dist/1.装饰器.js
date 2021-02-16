@@ -29,6 +29,9 @@ var M = /** @class */ (function () {
     M.add = function (a, b) {
         return a + b;
     };
+    M.sub = function (a, b) {
+        return a - b;
+    };
     __decorate([
         log
     ], M, "add", null);
@@ -36,3 +39,5 @@ var M = /** @class */ (function () {
 }());
 var v1 = M.add(1, 2);
 console.log(v1);
+var v2 = M.sub(1, 2);
+console.log(v2);
