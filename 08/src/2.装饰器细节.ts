@@ -14,6 +14,12 @@ function d4(target: any, name: string, descriptor: PropertyDescriptor) {
     console.log(typeof target, name, descriptor);
 }
 
+
+function d5(target: any, name: string, index: number) {
+    // name : 当前参数所在的方法
+    console.log(typeof target, name, index);
+}
+
 @d1
 class MyClass {
 
@@ -34,7 +40,7 @@ class MyClass {
     }
 
     @d4
-    public method1(x: number, y: number) {}
+    public method1(@d5 x: number, @d5 y: number) {}
 
     @d4
     public static method2() {}

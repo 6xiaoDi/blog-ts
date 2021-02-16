@@ -4,6 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 function d1(target) {
     console.log(typeof target, target);
 }
@@ -15,6 +18,10 @@ function d3(target, name, descriptor) {
 }
 function d4(target, name, descriptor) {
     console.log(typeof target, name, descriptor);
+}
+function d5(target, name, index) {
+    // name : 当前参数所在的方法
+    console.log(typeof target, name, index);
 }
 var MyClass = /** @class */ (function () {
     function MyClass() {
@@ -42,7 +49,8 @@ var MyClass = /** @class */ (function () {
         d3
     ], MyClass.prototype, "b", null);
     __decorate([
-        d4
+        d4,
+        __param(0, d5), __param(1, d5)
     ], MyClass.prototype, "method1", null);
     __decorate([
         d2
