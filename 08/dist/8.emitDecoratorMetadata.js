@@ -12,16 +12,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("reflect-metadata");
 function f() {
     return function (target, name, descriptor) {
-        console.log(Reflect.getMetadata('design:type', target, name));
-        console.log(Reflect.getMetadata('design:paramtypes', target, name));
-        console.log(Reflect.getMetadata('design:returntype', target, name));
+        var _t = Reflect.getMetadata('design:paramtypes', target, name)[0];
+        console.log(_t);
+        var value = descriptor.value;
+        if (_t === Number) {
+            value(100);
+        }
+        if (_t === String) {
+            value('csdn');
+        }
+        if (_t === Date) {
+            value(new Date);
+        }
     };
 }
 var B = /** @class */ (function () {
-    function B(a) {
+    function B() {
     }
     B.prototype.method1 = function (a, b) {
         return 'a';
+    };
+    B.prototype.method2 = function (x) {
+        console.log(x);
     };
     __decorate([
         f(),
@@ -29,5 +41,13 @@ var B = /** @class */ (function () {
         __metadata("design:paramtypes", [String, Number]),
         __metadata("design:returntype", String)
     ], B.prototype, "method1", null);
+    __decorate([
+        f(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Date]),
+        __metadata("design:returntype", void 0)
+    ], B.prototype, "method2", null);
     return B;
 }());
+var b = new B();
+// b.method2();
