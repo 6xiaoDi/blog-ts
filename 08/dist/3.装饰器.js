@@ -6,39 +6,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-function log(target, name, descriptor) {
-    /**
-     * target : 被装饰的方法所属的类
-     * name : 被装饰的方法的名称
-     * descriptor : 描述符
-     */
-    // 把原始的方法提取出来
-    var fn = descriptor.value;
-    descriptor.value = function (a, b) {
-        var result = fn(a, b);
-        console.log('日志：', {
-            name: name,
-            a: a,
-            b: b,
-            result: result
-        });
-        return result;
+function log(type) {
+    return function (target, name, descriptor) {
+        var value = descriptor.value;
+        descriptor.value = function (x, y) {
+            var result = value(x, y);
+            console.log({
+                type: type,
+                name: name,
+                x: x,
+                y: y,
+                result: result
+            });
+            return result;
+        };
     };
 }
 var M = /** @class */ (function () {
     function M() {
     }
-    M.add = function (a, b) {
-        return a + b;
+    M.add = function (x, y) {
+        return x + y;
     };
-    M.sub = function (a, b) {
-        return a - b;
+    M.sub = function (x, y) {
+        return x - y;
     };
     __decorate([
-        log
+        log('log')
     ], M, "add", null);
     __decorate([
-        log
+        log('storage')
     ], M, "sub", null);
     return M;
 }());

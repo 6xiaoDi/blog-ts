@@ -37,3 +37,5 @@ let v1 = M.add(1, 2);
 console.log(v1);
 let v2 = M.sub(1, 2);
 console.log(v2);
+
+export default {}

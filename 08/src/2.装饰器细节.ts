@@ -50,3 +50,5 @@ class MyClass {
     @d4
     public static method2() {}
 }
+
+export default {}
