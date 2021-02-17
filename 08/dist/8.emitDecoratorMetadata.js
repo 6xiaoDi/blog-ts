@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,9 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
 function f() {
     return function (target, name, descriptor) {
-        console.log(descriptor.value.length);
+        console.log(Reflect.getMetadata('design:type', target, name));
+        console.log(Reflect.getMetadata('design:paramtypes', target, name));
+        console.log(Reflect.getMetadata('design:returntype', target, name));
     };
 }
 var B = /** @class */ (function () {

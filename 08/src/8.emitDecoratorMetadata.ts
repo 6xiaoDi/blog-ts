@@ -1,8 +1,11 @@
+import 'reflect-metadata'
+
 function f() {
     return function(target: any, name: string, descriptor: PropertyDescriptor) {
 
-        console.log(descriptor.value.length)
-
+        console.log( Reflect.getMetadata('design:type', target, name) );
+        console.log( Reflect.getMetadata('design:paramtypes', target, name) );
+        console.log( Reflect.getMetadata('design:returntype', target, name) );
     }
 }
 
